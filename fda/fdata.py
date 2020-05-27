@@ -6,9 +6,6 @@ FDA package. FData file
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy.integrate as spi
-import matplotlib
-from typing import Callable
-from .distances import L2distance
 
 class FData:
     """
@@ -245,3 +242,22 @@ def scprod(x,y):
 
     """
     return (x*y).integrate()
+
+def asMatrix(array):
+    """
+    Returns the grid representation of some functional data. Each row is a sample and each column 
+    a value of the grid
+
+    Parameters
+    ----------
+    array : Iterable of FData
+        Data to be converted
+
+    Returns
+    -------
+    numpy.matrix
+        The matrix representation where each
+
+    """
+
+    return np.asmatrix([curve.value for curve in array])

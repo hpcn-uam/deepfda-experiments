@@ -1,11 +1,10 @@
-from .fdata import FData
 from typing import Callable
 import numpy as np
+from .fdata import FData
 
 class GaussianProcess:
-    """
-    Class to simulate Gaussian processes
-    
+    r"""Class to simulate Gaussian processes
+
     Keyword arguments:
         mean -- FData that is the mean of the process
         covariance -- function k(s,t) \in \mathbb{R} such k(s,t) = Cov(X_s, X_t)
